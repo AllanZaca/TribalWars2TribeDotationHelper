@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TribalWars2TribeDotation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        ResizeMode="CanMinimize"
+        Title="MainWindow" Height="350" Width="600">
     <Grid>
-        
+        <Button x:Name="loadTribeMembersButton" Content="Load tribe members" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="loadTribeMembersButton_Click"/>
+        <StatusBar Height="20" VerticalAlignment="Top" Margin="0,291,0,0">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem Grid.Column="0">
+                <TextBlock Name="usersLoad" FontSize="11" Text="{Binding}"/>
+            </StatusBarItem>
+            <Separator Grid.Column="1"/>
+            <StatusBarItem Grid.Column="2">
+                <TextBlock Name="dotationsLoad" FontSize="11" Text="{Binding}"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Button x:Name="saveTribeMembersButton" Content="Save tribe members" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="125" Click="saveTribeMembersButton_Click"/>
     </Grid>
 </Window>

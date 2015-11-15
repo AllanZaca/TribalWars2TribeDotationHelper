@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dotation.cs" />
+    <Compile Include="DotationRole.cs" />
+    <Compile Include="ProgramData.cs" />
+    <Compile Include="TribeMember.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
