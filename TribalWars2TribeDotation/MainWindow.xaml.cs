@@ -3,17 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Xml.Serialization;
 
 namespace TribalWars2TribeDotation
@@ -48,7 +38,6 @@ namespace TribalWars2TribeDotation
                 {
                     TribeMember member;
                     string temp;
-                    int i = 0;
                     while ((temp = await stream.ReadLineAsync()) != null)
                     {
                         member = new TribeMember();
@@ -73,7 +62,6 @@ namespace TribalWars2TribeDotation
                         member.HonorPoints = tempI;
 
                         programData.TribeMembers.Add(member);
-                        i++;
                     }
                 }
             }
@@ -94,6 +82,7 @@ namespace TribalWars2TribeDotation
                 using (TextWriter writer = new StreamWriter(fileDialog.FileName))
                 {
                     serializer.Serialize(writer, programData.TribeMembers);
+                    
                 }
             }
         }
