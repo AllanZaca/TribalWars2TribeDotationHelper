@@ -5,9 +5,16 @@ namespace TribalWars2TribeDotation
     [XmlRoot("TribeMember", Namespace = "", IsNullable = false)]
     public class TribeMember
     {
-        public string Name { get; set; }
-        public int Points { get; set; }
-        public int VillagesNumber { get; set; }
-        public int HonorPoints { get; set; }
+        public string PlayerName { get; set; }
+        public int Dotation { get; set; }
+        public PlayerStatistic PlayerStatNew { get; set; }
+        public PlayerStatistic PlayerStatOld { get; set; }
+
+        public TribeMember()
+        {
+            PlayerStatOld = new PlayerStatistic();
+            PlayerStatNew = new PlayerStatistic();
+        }
     }
+
 }

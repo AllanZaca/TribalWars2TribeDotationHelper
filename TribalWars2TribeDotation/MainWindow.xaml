@@ -8,7 +8,10 @@
         ResizeMode="CanMinimize"
         Title="MainWindow" Height="350" Width="600">
     <Grid>
-        <Button x:Name="loadTribeMembersButton" Content="Load tribe members" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="loadTribeMembersButton_Click"/>
+        <Button x:Name="loadTribeMembersButton" Content="Load old members" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="loadTribeMembersButton_Click"/>
+        <Button x:Name="saveTribeMembersButton" Content="Save tribe members" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="125" Click="saveTribeMembersButton_Click"/>
+        <Button x:Name="loadDotationButton" Content="Load dotation" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="125" Click="loadDotationButton_Click"/>
+
         <StatusBar Height="20" VerticalAlignment="Top" Margin="0,291,0,0">
             <StatusBar.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -25,10 +28,8 @@
                 <TextBlock Name="usersLoad" FontSize="11" Text="{Binding}"/>
             </StatusBarItem>
             <Separator Grid.Column="1"/>
-            <StatusBarItem Grid.Column="2">
-                <TextBlock Name="dotationsLoad" FontSize="11" Text="{Binding}"/>
-            </StatusBarItem>
         </StatusBar>
-        <Button x:Name="saveTribeMembersButton" Content="Save tribe members" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="125" Click="saveTribeMembersButton_Click"/>
+        <Button x:Name="loadTribeMembersNewButton" Content="Load new members" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="125" Click="loadTribeMembersNewButton_Click"/>
+        <Button x:Name="loadTribeMembersXmlButton" Content="Tribe members xml" HorizontalAlignment="Left" Margin="140,10,0,0" VerticalAlignment="Top" Width="125" Click="loadTribeMembersXmlButton_Click"/>
     </Grid>
 </Window>

@@ -57,6 +57,8 @@
     </ApplicationDefinition>
     <Compile Include="Dotation.cs" />
     <Compile Include="DotationRole.cs" />
+    <Compile Include="FileOperations.cs" />
+    <Compile Include="PlayerStatistic.cs" />
     <Compile Include="ProgramData.cs" />
     <Compile Include="TribeMember.cs" />
     <Page Include="MainWindow.xaml">
